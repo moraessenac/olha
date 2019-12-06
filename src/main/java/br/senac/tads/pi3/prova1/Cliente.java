@@ -24,12 +24,12 @@ public class Cliente implements Serializable {
 
     private LocalDateTime dataHoraCadastro;
 
-    public Cliente(String nomeCompleto, Date dataNascimento) {
+    public Cliente(String nomeCompleto, LocalDate dataNascimento) {
         this.nomeCompleto = nomeCompleto;
         this.dataNascimento = dataNascimento;
     }
 
-    public Cliente(int id, String nomeCompleto, Date dataNascimento) {
+    public Cliente(int id, String nomeCompleto, LocalDate dataNascimento) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.dataNascimento = dataNascimento;
@@ -57,11 +57,11 @@ public class Cliente implements Serializable {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

@@ -13,7 +13,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,7 +35,7 @@ public class ClienteDAO {
 
             ps = con.prepareStatement(query);
             ps.setString(1, cliente.getNomeCompleto());
-            ps.setDate(2, new java.sql.Date(cliente.getDataNascimento().getTime()));
+            ps.setLocalDate(2, new java.sql.LocalDate(cliente.getDataNascimento().getTime()));
 
             int updatedlines = ps.executeUpdate();
 
@@ -65,7 +64,7 @@ public class ClienteDAO {
                     Cliente cliente = new Cliente();
                     cliente.setId(rs.getInt("ID"));
                     cliente.setNomeCompleto(rs.getString("NOME"));
-                    cliente.setDataNascimento((Date) rs.getObject("DATA_NASCIMENTO"));
+                    cliente.setDataNascimento((LocalDate) rs.getObject("DATA_NASCIMENTO"));
                     Clientes.add(cliente);
                 }
             }
@@ -120,7 +119,7 @@ public class ClienteDAO {
                 client = new Cliente();
                 client.setId(rs.getInt("ID"));
                 client.setNomeCompleto(rs.getString("NOME"));
-                client.setDataNascimento(rs.getDate("DATA_NASCIMENTO"));
+                client.setDataNascimento(rs.getLocalDate("DATA_NASCIMENTO"));
                 
             }
             con.close();

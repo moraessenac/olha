@@ -8,8 +8,8 @@ package ClienteController;
 import br.senac.tads.pi3.prova1.Cliente;
 import br.senac.tads.pi3.prova1.DAO.ClienteDAO;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  */
 public class ClienteController {
 
-    public static boolean create(String nomeCompleto, Date dataNascimento) throws SQLException {
+    public static boolean create(String nomeCompleto, LocalDate dataNascimento) throws SQLException {
         Cliente cliente = new Cliente(nomeCompleto, dataNascimento);
         return ClienteDAO.create(cliente);
 
