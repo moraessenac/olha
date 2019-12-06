@@ -1,0 +1,5 @@
+br\senac\tads\pi3\prova1\Cliente.class
+ClienteController\ClienteController.class
+br\senac\tads\pi3\prova1\DAO\ClienteDAO.class
+ClienteSERVLET\ClienteServlet.class
+ConexaoBanco\ConexaoBanco.class
